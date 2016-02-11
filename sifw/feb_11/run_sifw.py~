@@ -4,6 +4,70 @@ import os
 from sifw import sifw
 from sifw_parameters import days, H, b, d, _beta, _rho, _k, _alpha, _r, _mu, __lambda, _p, _s, _D, _W
 
+
+# days = 730
+# H = [10000]
+# b = [.02, .05, .1]
+# d = [.01, .02, .05]
+# beta = [.01, .05, .1, .2, .5, .9]
+# rho = [.01, .05, .1, .2, .5, .9]
+# k = [.01, .05, .1, .2, .5, .9]
+# alpha = [.01, .05, .1, .2, .5, .9]
+# r = [.01, .1, 1, 10, 100, 1000, 10000]
+# mu = [.01, .1, 1, 10, 100, 1000, 10000]
+# _lambda = [.01, .1, 1, 10, 100, 1000, 10000]
+# p = [.01, .1, 1, 10, 100, 1000, 10000]
+# s = [.01, .1, 1, 10, 100, 1000, 10000]
+# _D = [.01, .1, 1, 10, 100, 1000, 10000]
+
+#days = 730
+#H = 10000
+#b = .06
+#d = .02
+#_beta = [.05, .5]
+#_rho = [.05, .5]
+#_k = [.05, .5]
+#_alpha = [.01, .1]
+#_r = [1, 1000]
+#_mu = [.5, 500]
+#__lambda = [1, 10]
+#_p = [.01, 1]
+#_s = [.01, 1]
+#_D = [.01, 1]
+#_W = [1, 1000]
+
+#print days
+#print H
+#print b
+#print d
+#print _beta
+#print _rho
+#print _k
+#print _alpha
+#print _r
+#print _mu
+#print __lambda
+#print _p
+#print _s
+#print _D
+#print _W
+
+#days
+#H
+#b
+#d
+#_beta
+#_rho
+#_k
+#_alpha
+#_r
+#_mu
+#__lambda
+#_p
+#_s
+#_D
+#_W
+
 ts = time.time()
 subdirectory = datetime.datetime.fromtimestamp(ts).strftime('%Y_%m_%d_%H_%M_%S')
 os.mkdir(subdirectory)
@@ -69,67 +133,3 @@ for i1 in range(2):
                                             f.close()
 
 # sifw(days, H, b, d, beta, rho, k, alpha, r, mu, _lambda, p, s, D, W)
-
-# days = 730
-# H = [10000]
-# b = [.02, .05, .1]
-# d = [.01, .02, .05]
-# beta = [.01, .05, .1, .2, .5, .9]
-# rho = [.01, .05, .1, .2, .5, .9]
-# k = [.01, .05, .1, .2, .5, .9]
-# alpha = [.01, .05, .1, .2, .5, .9]
-# r = [.01, .1, 1, 10, 100, 1000, 10000]
-# mu = [.01, .1, 1, 10, 100, 1000, 10000]
-# _lambda = [.01, .1, 1, 10, 100, 1000, 10000]
-# p = [.01, .1, 1, 10, 100, 1000, 10000]
-# s = [.01, .1, 1, 10, 100, 1000, 10000]
-# _D = [.01, .1, 1, 10, 100, 1000, 10000]
-
-#days = 730
-#H = 10000
-#b = .06
-#d = .02
-#_beta = [.05, .5]
-#_rho = [.05, .5]
-#_k = [.05, .5]
-#_alpha = [.01, .1]
-#_r = [1, 1000]
-#_mu = [.5, 500]
-#__lambda = [1, 10]
-#_p = [.01, 1]
-#_s = [.01, 1]
-#_D = [.01, 1]
-#_W = [1, 1000]
-
-#print days
-#print H
-#print b
-#print d
-#print _beta
-#print _rho
-#print _k
-#print _alpha
-#print _r
-#print _mu
-#print __lambda
-#print _p
-#print _s
-#print _D
-#print _W
-
-#days
-#H
-#b
-#d
-#_beta
-#_rho
-#_k
-#_alpha
-#_r
-#_mu
-#__lambda
-#_p
-#_s
-#_D
-#_W
-
