@@ -22,7 +22,7 @@ def get_parameters():
     f.close()
     return mapping
 
-def sifw(days, H, b, d, beta, rho, k, alpha, r, mu, _lambda, p, s, _D, _W=1):
+def sifw(days, H, b, d, beta, rho, k, alpha, r, mu, _lambda, p, s, D, _W=1):
     # Computational constants
     dt = 1./(24)        # intervals of 1 hour (float)
     # days = 365             # Simulation lasts 365 days
@@ -42,17 +42,17 @@ def sifw(days, H, b, d, beta, rho, k, alpha, r, mu, _lambda, p, s, _D, _W=1):
     # def D(t):
     #     return _D + _D*math.sin(2*math.pi*t/365)/2
 
-    print H
-    print S[0], I[0], F[0], W[0]
+    # print H
+    # print S[0], I[0], F[0], W[0]
     # Approximations
     for i in range(N_t):
         S[i+1] = S[i] + dt*((b - d)*(H - S[i] - I[i]) + rho*I[i] - beta*S[i]*F[i]/(k*W[i] + F[i]))
         I[i+1] = I[i] + dt*(beta*S[i]*F[i]/(k*W[i] + F[i]) - (d + rho + alpha)*I[i])
         F[i+1] = F[i] + dt*((r - mu)*F[i] + _lambda*I[i])
-        W[i+1] = W[i] + dt*(p + s - D(i)*W[i])
+        W[i+1] = W[i] + dt*(p + s - D*W[i])
 
-        if (i % 100 == 0):
-            print S[i+1], I[i+1], F[i+1], W[i+1]
+        # if (i % 100 == 0):
+        #     print S[i+1], I[i+1], F[i+1], W[i+1]
 
     return S, I, F, W, t
 
